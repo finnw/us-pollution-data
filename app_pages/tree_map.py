@@ -16,7 +16,10 @@ def tree_map_body():
     gas_aqi = gas + ' AQI'
     gas_mean = gas + ' Mean'
 
+    df_chart = df.groupby(['State', 'County', 'City'], sort=False)[[gas_aqi, gas_mean]].mean().reset_index()
+
     st.write(f"Chart for {gas_options.get(gas)} AQI")
-    fig = px.treemap(data_frame=df, path=['State','County'], values=gas_aqi, color=gas_mean, width=800,height=600, color_continuous_scale='turbid')
+    fig = px.treemap(data_frame=df_chart, path=[px.Constant('United States'), 'State','County', 'City'], values=gas_aqi, color=gas_mean, maxdepth=2, 
+                     width=800,height=600, color_continuous_scale='dense')
     st.plotly_chart(fig)
     st.write("---")
