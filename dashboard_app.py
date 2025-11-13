@@ -13,7 +13,7 @@ app.add_page("Tree Map", tree_map_body)
 # cache data for faster loading on page changes
 @st.cache_data
 def load_data():
-    path = "./data/archive.zip"
+    path = "./data/cleaned_pollution_data.zip"
     df = pd.read_csv(path, compression='zip', index_col=0)
     return df
 
