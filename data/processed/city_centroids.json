@@ -1,0 +1,806 @@
+{
+  "Alabama": {
+    "jefferson": {
+      "birmingham": {
+        "lat": 33.5206824,
+        "lon": -86.8024326
+      }
+    }
+  },
+  "Arizona": {
+    "maricopa": {
+      "phoenix": {
+        "lat": 33.4484367,
+        "lon": -112.074141
+      },
+      "scottsdale": {
+        "lat": 33.4942189,
+        "lon": -111.926018
+      }
+    },
+    "pima": {
+      "tucson": {
+        "lat": 32.2228765,
+        "lon": -110.974847
+      }
+    }
+  },
+  "Arkansas": {
+    "pulaski": {
+      "north little rock": {
+        "lat": 34.769536,
+        "lon": -92.2670941
+      }
+    }
+  },
+  "California": {
+    "alameda": {
+      "berkeley": {
+        "lat": 37.8708393,
+        "lon": -122.272863
+      },
+      "oakland": {
+        "lat": 37.8044557,
+        "lon": -122.271356
+      }
+    },
+    "contra costa": {
+      "bethel island": {
+        "lat": 38.029034,
+        "lon": -121.6400088
+      },
+      "concord": {
+        "lat": 37.9768525,
+        "lon": -122.0335624
+      },
+      "crockett": {
+        "lat": 38.036666,
+        "lon": -122.2053113
+      },
+      "pittsburg": {
+        "lat": 38.0181745,
+        "lon": -121.8901232
+      },
+      "san pablo": {
+        "lat": 37.9621457,
+        "lon": -122.3455263
+      }
+    },
+    "fresno": {
+      "fresno": {
+        "lat": 36.7394421,
+        "lon": -119.78483
+      }
+    },
+    "humboldt": {
+      "eureka": {
+        "lat": 40.8018746,
+        "lon": -124.1707558
+      }
+    },
+    "imperial": {
+      "calexico": {
+        "lat": 32.6668134,
+        "lon": -115.4963754
+      }
+    },
+    "kern": {
+      "bakersfield": {
+        "lat": 35.3738712,
+        "lon": -119.019463
+      }
+    },
+    "los angeles": {
+      "burbank": {
+        "lat": 34.1812089,
+        "lon": -118.307201
+      },
+      "hawthorne": {
+        "lat": 33.9128272,
+        "lon": -118.3426122
+      },
+      "long beach": {
+        "lat": 33.7690164,
+        "lon": -118.191604
+      },
+      "los angeles": {
+        "lat": 34.0536909,
+        "lon": -118.242766
+      },
+      "west los angeles": {
+        "lat": 34.0468546,
+        "lon": -118.430254
+      }
+    },
+    "orange": {
+      "costa mesa": {
+        "lat": 33.6633386,
+        "lon": -117.903317
+      }
+    },
+    "riverside": {
+      "rubidoux": {
+        "lat": 33.9964933,
+        "lon": -117.4079318
+      }
+    },
+    "sacramento": {
+      "arden-arcade": {
+        "lat": 38.6039613,
+        "lon": -121.3830035
+      }
+    },
+    "san bernardino": {
+      "fontana": {
+        "lat": 34.0922947,
+        "lon": -117.43433
+      },
+      "victorville": {
+        "lat": 34.5361067,
+        "lon": -117.2911565
+      }
+    },
+    "san diego": {
+      "chula vista": {
+        "lat": 32.6400541,
+        "lon": -117.084195
+      },
+      "el cajon": {
+        "lat": 32.7947731,
+        "lon": -116.962526
+      },
+      "san diego": {
+        "lat": 32.7174202,
+        "lon": -117.162772
+      }
+    },
+    "san francisco": {
+      "san francisco": {
+        "lat": 37.776547,
+        "lon": -122.3948371
+      }
+    },
+    "santa barbara": {
+      "capitan": {
+        "lat": 34.463564,
+        "lon": -120.0432487
+      },
+      "goleta": {
+        "lat": 34.4358295,
+        "lon": -119.8276389
+      },
+      "lompoc": {
+        "lat": 34.6391501,
+        "lon": -120.4579009
+      },
+      "vandenberg air force base": {
+        "lat": 34.7088437,
+        "lon": -120.5447422
+      }
+    },
+    "santa clara": {
+      "cupertino": {
+        "lat": 37.3228934,
+        "lon": -122.0322895
+      },
+      "san jose": {
+        "lat": 37.3361663,
+        "lon": -121.890591
+      }
+    },
+    "santa cruz": {
+      "davenport": {
+        "lat": 37.015423,
+        "lon": -122.190712
+      }
+    },
+    "solano": {
+      "benicia": {
+        "lat": 38.049365,
+        "lon": -122.1585777
+      },
+      "vallejo": {
+        "lat": 38.1040864,
+        "lon": -122.2566367
+      }
+    }
+  },
+  "Colorado": {
+    "adams": {
+      "welby": {
+        "lat": 39.838348,
+        "lon": -104.9664938
+      }
+    },
+    "denver": {
+      "denver": {
+        "lat": 39.6862057,
+        "lon": -104.9391143
+      }
+    }
+  },
+  "Delaware": {
+    "new castle": {
+      "wilmington": {
+        "lat": 39.7459468,
+        "lon": -75.546589
+      }
+    }
+  },
+  "District Of Columbia": {
+    "district of columbia": {
+      "washington": {
+        "lat": 38.875384,
+        "lon": -77.0470319
+      }
+    }
+  },
+  "Florida": {
+    "hillsborough": {
+      "valrico": {
+        "lat": 27.9378338,
+        "lon": -82.2327525
+      }
+    },
+    "orange": {
+      "winter park": {
+        "lat": 28.5977707,
+        "lon": -81.3510264
+      }
+    }
+  },
+  "Illinois": {
+    "cook": {
+      "chicago": {
+        "lat": 41.8755616,
+        "lon": -87.6244212
+      },
+      "cicero": {
+        "lat": 41.8455398,
+        "lon": -87.7540199
+      },
+      "northbrook": {
+        "lat": 42.128704,
+        "lon": -87.8265089
+      }
+    },
+    "saint clair": {
+      "east saint louis": {
+        "lat": 38.6268666,
+        "lon": -90.159707
+      }
+    }
+  },
+  "Iowa": {
+    "polk": {
+      "des moines": {
+        "lat": 41.5868654,
+        "lon": -93.6249494
+      }
+    },
+    "scott": {
+      "davenport": {
+        "lat": 41.5235808,
+        "lon": -90.5770967
+      }
+    }
+  },
+  "Kansas": {
+    "wyandotte": {
+      "kansas city": {
+        "lat": 39.1134562,
+        "lon": -94.626497
+      }
+    }
+  },
+  "Kentucky": {
+    "boyd": {
+      "ashland": {
+        "lat": 38.4784144,
+        "lon": -82.6379387
+      }
+    },
+    "henderson": {
+      "henderson": {
+        "lat": 37.8367513,
+        "lon": -87.5907631
+      }
+    },
+    "jefferson": {
+      "louisville": {
+        "lat": 38.2542376,
+        "lon": -85.759407
+      }
+    },
+    "mccracken": {
+      "paducah": {
+        "lat": 37.0833893,
+        "lon": -88.6000478
+      }
+    }
+  },
+  "Maine": {
+    "aroostook": {
+      "presque isle": {
+        "lat": 46.6812216,
+        "lon": -68.0154578
+      }
+    },
+    "cumberland": {
+      "portland": {
+        "lat": 43.6573605,
+        "lon": -70.2586618
+      }
+    }
+  },
+  "Maryland": {
+    "baltimore": {
+      "essex": {
+        "lat": 39.301059,
+        "lon": -76.4424869
+      }
+    },
+    "garrett": {
+      "grantsville": {
+        "lat": 39.6991282,
+        "lon": -79.1577212
+      }
+    },
+    "prince george's": {
+      "beltsville": {
+        "lat": 39.0397735,
+        "lon": -76.9271851
+      }
+    }
+  },
+  "Massachusetts": {
+    "suffolk": {
+      "boston": {
+        "lat": 42.3554334,
+        "lon": -71.060511
+      }
+    }
+  },
+  "Michigan": {
+    "kent": {
+      "grand rapids": {
+        "lat": 42.9632425,
+        "lon": -85.6678639
+      }
+    },
+    "wayne": {
+      "detroit": {
+        "lat": 42.3315509,
+        "lon": -83.0466403
+      }
+    }
+  },
+  "Minnesota": {
+    "anoka": {
+      "blaine": {
+        "lat": 45.1607987,
+        "lon": -93.2349489
+      }
+    }
+  },
+  "Missouri": {
+    "saint louis": {
+      "breckenridge hills": {
+        "lat": 38.71978,
+        "lon": -90.367624
+      },
+      "ferguson": {
+        "lat": 38.744707,
+        "lon": -90.3038975
+      },
+      "ladue": {
+        "lat": 38.6497743,
+        "lon": -90.3806725
+      },
+      "st. ann": {
+        "lat": 38.7281444,
+        "lon": -90.3879082
+      },
+      "sunset hills": {
+        "lat": 38.5389423,
+        "lon": -90.407341
+      }
+    },
+    "st. louis city": {
+      "st. louis": {
+        "lat": 38.7496273,
+        "lon": -90.3704702
+      }
+    }
+  },
+  "Nevada": {
+    "clark": {
+      "boulder city": {
+        "lat": 35.9787649,
+        "lon": -114.8337574
+      }
+    },
+    "washoe": {
+      "reno": {
+        "lat": 39.5261788,
+        "lon": -119.812658
+      }
+    }
+  },
+  "New Hampshire": {
+    "hillsborough": {
+      "manchester": {
+        "lat": 42.9956397,
+        "lon": -71.4547891
+      }
+    }
+  },
+  "New Jersey": {
+    "camden": {
+      "camden": {
+        "lat": 39.9448402,
+        "lon": -75.1198911
+      }
+    },
+    "essex": {
+      "newark": {
+        "lat": 40.735657,
+        "lon": -74.1723667
+      }
+    }
+  },
+  "New Mexico": {
+    "bernalillo": {
+      "albuquerque": {
+        "lat": 35.0841034,
+        "lon": -106.650985
+      }
+    }
+  },
+  "New York": {
+    "bronx": {
+      "new york": {
+        "lat": 40.8622431,
+        "lon": -73.8771541
+      }
+    },
+    "monroe": {
+      "rochester": {
+        "lat": 43.157285,
+        "lon": -77.615214
+      }
+    },
+    "queens": {
+      "new york": {
+        "lat": 40.6429479,
+        "lon": -73.7793734
+      }
+    },
+    "suffolk": {
+      "holtsville": {
+        "lat": 40.8093136,
+        "lon": -73.0320561
+      }
+    }
+  },
+  "North Carolina": {
+    "forsyth": {
+      "winston-salem": {
+        "lat": 36.0998131,
+        "lon": -80.2440518
+      }
+    },
+    "mecklenburg": {
+      "charlotte": {
+        "lat": 35.2272086,
+        "lon": -80.8430827
+      }
+    },
+    "wake": {
+      "raleigh": {
+        "lat": 35.7803977,
+        "lon": -78.6390989
+      }
+    }
+  },
+  "Ohio": {
+    "athens": {
+      "athens": {
+        "lat": 39.3289242,
+        "lon": -82.1012479
+      }
+    },
+    "cuyahoga": {
+      "cleveland": {
+        "lat": 41.4996574,
+        "lon": -81.6936772
+      }
+    },
+    "hamilton": {
+      "cincinnati": {
+        "lat": 39.1014537,
+        "lon": -84.5124602
+      }
+    }
+  },
+  "Oklahoma": {
+    "adair": {
+      "cherry tree": {
+        "lat": 35.745509,
+        "lon": -94.6535279
+      }
+    },
+    "cherokee": {
+      "park hill": {
+        "lat": 35.8621725,
+        "lon": -94.9370555
+      }
+    },
+    "kay": {
+      "ponca city": {
+        "lat": 36.703647,
+        "lon": -97.081898
+      }
+    },
+    "oklahoma": {
+      "oklahoma city": {
+        "lat": 35.4729886,
+        "lon": -97.5170536
+      }
+    },
+    "ottawa": {
+      "miami": {
+        "lat": 36.8746177,
+        "lon": -94.877374
+      }
+    },
+    "tulsa": {
+      "tulsa": {
+        "lat": 36.1563122,
+        "lon": -95.9927516
+      }
+    }
+  },
+  "Oregon": {
+    "multnomah": {
+      "portland": {
+        "lat": 45.5202471,
+        "lon": -122.674194
+      }
+    }
+  },
+  "Pennsylvania": {
+    "allegheny": {
+      "pittsburgh": {
+        "lat": 40.4416941,
+        "lon": -79.9900861
+      }
+    },
+    "beaver": {
+      "beaver falls": {
+        "lat": 40.7520097,
+        "lon": -80.3192295
+      }
+    },
+    "berks": {
+      "reading": {
+        "lat": 40.335345,
+        "lon": -75.9279495
+      }
+    },
+    "blair": {
+      "altoona": {
+        "lat": 40.5193586,
+        "lon": -78.3968299
+      }
+    },
+    "bucks": {
+      "bristol": {
+        "lat": 40.1229002,
+        "lon": -74.8644706
+      }
+    },
+    "cambria": {
+      "johnstown": {
+        "lat": 40.3267407,
+        "lon": -78.9219698
+      }
+    },
+    "erie": {
+      "erie": {
+        "lat": 42.1294712,
+        "lon": -80.0852695
+      }
+    },
+    "lackawanna": {
+      "scranton": {
+        "lat": 41.4086874,
+        "lon": -75.6621294
+      }
+    },
+    "lancaster": {
+      "lancaster": {
+        "lat": 40.0379958,
+        "lon": -76.3056707
+      }
+    },
+    "lawrence": {
+      "new castle": {
+        "lat": 40.9999202,
+        "lon": -80.3471856
+      }
+    },
+    "luzerne": {
+      "wilkes-barre": {
+        "lat": 41.2464824,
+        "lon": -75.8817316
+      }
+    },
+    "montgomery": {
+      "norristown": {
+        "lat": 40.1148787,
+        "lon": -75.3433705
+      }
+    },
+    "northampton": {
+      "freemansburg": {
+        "lat": 40.6264875,
+        "lon": -75.345735
+      }
+    },
+    "philadelphia": {
+      "philadelphia": {
+        "lat": 39.9527237,
+        "lon": -75.1635262
+      }
+    },
+    "washington": {
+      "charleroi": {
+        "lat": 40.1378499,
+        "lon": -79.8981035
+      }
+    },
+    "westmoreland": {
+      "greensburg": {
+        "lat": 40.3024514,
+        "lon": -79.5443274
+      }
+    },
+    "york": {
+      "york": {
+        "lat": 39.962493,
+        "lon": -76.7276989
+      }
+    }
+  },
+  "Rhode Island": {
+    "providence": {
+      "east providence": {
+        "lat": 41.8194081,
+        "lon": -71.376257
+      }
+    }
+  },
+  "South Dakota": {
+    "minnehaha": {
+      "sioux falls": {
+        "lat": 43.5476008,
+        "lon": -96.7293629
+      }
+    }
+  },
+  "Texas": {
+    "bexar": {
+      "san antonio": {
+        "lat": 29.4246002,
+        "lon": -98.4951405
+      }
+    },
+    "dallas": {
+      "dallas": {
+        "lat": 32.7762719,
+        "lon": -96.7968559
+      }
+    },
+    "el paso": {
+      "el paso": {
+        "lat": 31.7601164,
+        "lon": -106.4870404
+      }
+    },
+    "harris": {
+      "deer park": {
+        "lat": 29.7052284,
+        "lon": -95.1238204
+      },
+      "houston": {
+        "lat": 29.7589382,
+        "lon": -95.3676974
+      }
+    },
+    "mclennan": {
+      "waco": {
+        "lat": 31.5491899,
+        "lon": -97.1474628
+      }
+    },
+    "travis": {
+      "austin": {
+        "lat": 30.2711286,
+        "lon": -97.7436995
+      }
+    }
+  },
+  "Utah": {
+    "duchesne": {
+      "roosevelt": {
+        "lat": 40.299403,
+        "lon": -109.9887605
+      }
+    },
+    "salt lake": {
+      "salt lake city": {
+        "lat": 40.7596198,
+        "lon": -111.886797
+      }
+    }
+  },
+  "Virginia": {
+    "fairfax": {
+      "annandale": {
+        "lat": 38.838703,
+        "lon": -77.1951755
+      },
+      "mclean": {
+        "lat": 38.9366853,
+        "lon": -77.185843
+      },
+      "seven corners": {
+        "lat": 38.8659197,
+        "lon": -77.1441138
+      }
+    },
+    "hampton city": {
+      "hampton": {
+        "lat": 36.9507552,
+        "lon": -76.4114187
+      }
+    },
+    "henrico": {
+      "east highland park": {
+        "lat": 37.5809323,
+        "lon": -77.3825103
+      }
+    },
+    "roanoke": {
+      "vinton": {
+        "lat": 37.2800221,
+        "lon": -79.8975673
+      }
+    }
+  },
+  "Washington": {
+    "king": {
+      "seattle": {
+        "lat": 47.6038321,
+        "lon": -122.330062
+      }
+    }
+  },
+  "Wisconsin": {
+    "milwaukee": {
+      "milwaukee": {
+        "lat": 43.0386475,
+        "lon": -87.9090751
+      }
+    }
+  },
+  "Wyoming": {
+    "fremont": {
+      "riverton": {
+        "lat": 43.0247245,
+        "lon": -108.380727
+      }
+    }
+  }
+}
