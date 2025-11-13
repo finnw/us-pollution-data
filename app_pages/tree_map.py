@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import plotly as px
+import plotly.express as px
 
 def tree_map_body():
     st.write("# Tree Map")
@@ -17,7 +17,6 @@ def tree_map_body():
     gas_mean = gas + ' Mean'
 
     st.write(f"Chart for {gas_options.get(gas)} AQI")
-    import plotly.express as px
     fig = px.treemap(data_frame=df, path=['State','County'], values=gas_aqi, color=gas_mean, width=800,height=600, color_continuous_scale='turbid')
     st.plotly_chart(fig)
     st.write("---")
