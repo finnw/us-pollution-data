@@ -18,6 +18,7 @@ def load_data():
     return df
 
 # save data to session_state for use across app
+# method from https://discuss.streamlit.io/t/is-there-a-way-to-get-data-cache-in-multi-page-app/55224/2
 if 'loaded_data' not in st.session_state:
     st.session_state.loaded_data = load_data()
 
