@@ -5,14 +5,7 @@ import plotly as px
 def tree_map_body():
     st.write("# Tree Map")
 
-    # cache data for faster loading on page changes
-    @st.cache_data
-    def load_your_data():
-        path = "./data/archive.zip"
-        df = pd.read_csv(path, compression='zip', index_col=0)
-        return df
-
-    df = load_your_data()
+    df = st.session_state.loaded_data
 
     # dictionary for mapping gas names to abbreviations
     # label function from https://discuss.streamlit.io/t/format-func-function-examples-please/11295/3
