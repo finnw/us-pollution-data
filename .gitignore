@@ -9,3 +9,5 @@ node_modules/
 cloudinary_python.txt
 kaggle.json
 .venv/
+data/*.zip
+data/*.csv
