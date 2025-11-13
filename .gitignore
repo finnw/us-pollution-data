@@ -10,3 +10,5 @@ cloudinary_python.txt
 kaggle.json
 .venv/
 data/*.csv
+ jupyter_notebooks/reports/
+ jupyter_notebooks/reports/**
