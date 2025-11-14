@@ -1,7 +1,7 @@
+
 import streamlit as st
 from app_pages.multi_page import MultiPage
 import pandas as pd
-
 from app_pages.intro import intro_body
 from app_pages.heat_map import heat_map_body
 from app_pages.time_series import time_series_body
@@ -12,6 +12,10 @@ from utils.population_join import (
     enrich_with_city_population,
 )
 from pathlib import Path
+from app_pages.measurement_coverage import measurement_coverage_body
+from app_pages.population_correlation import population_correlation_body
+from app_pages.event_impact import event_impact_body
+from app_pages.regional_differences import regional_differences_body
 
 app = MultiPage("US Pollution Dashboard")
 
@@ -21,10 +25,10 @@ app.add_page("Introduction", intro_body)
 app.add_page("Heat Map", heat_map_body)
 app.add_page("Pollution Over Time", time_series_body)
 app.add_page("Tree Map", tree_map_body)
-from app_pages.measurement_coverage import measurement_coverage_body
 app.add_page("Measurement Coverage", measurement_coverage_body)
-from app_pages.event_impact import event_impact_body
+app.add_page("Population & Pollution Correlation", population_correlation_body)
 app.add_page("Event Impact Dashboard", event_impact_body)
+app.add_page("Regional Differences", regional_differences_body)
 
 # cache data for faster loading on page changes
 
