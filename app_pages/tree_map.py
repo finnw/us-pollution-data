@@ -16,10 +16,13 @@ def tree_map_body():
     gas_aqi = gas + ' AQI'
     gas_mean = gas + ' Mean'
 
-    df_chart = df.groupby(['State', 'County', 'City'], sort=False)[[gas_aqi, gas_mean]].mean().reset_index()
+    df_plot = df.groupby(['State', 'County', 'City'], sort=False)[[gas_aqi, gas_mean]].mean().reset_index()
+
+    # fix zero division error by https://stackoverflow.com/questions/65336361/weights-sum-to-zero-can-t-be-normalized-error-in-treemap-of-plotly-express
+    df_plot = df_plot.loc[df_plot[gas_mean]!=0]
 
     st.write(f"Chart for {gas_options.get(gas)} AQI")
-    fig = px.treemap(data_frame=df_chart, path=[px.Constant('United States'), 'State','County', 'City'], values=gas_aqi, color=gas_mean, maxdepth=2, 
+    fig = px.treemap(data_frame=df_plot, path=[px.Constant('United States'), 'State','County', 'City'], values=gas_aqi, color=gas_mean, maxdepth=2, 
                      width=800,height=600, color_continuous_scale='dense')
     st.plotly_chart(fig)
     st.write("---")
