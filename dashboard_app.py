@@ -2,6 +2,7 @@ import streamlit as st
 from app_pages.multi_page import MultiPage
 import pandas as pd
 
+from app_pages.intro import intro_body
 from app_pages.heat_map import heat_map_body
 from app_pages.time_series import time_series_body
 from app_pages.tree_map import tree_map_body
@@ -16,6 +17,7 @@ app = MultiPage("US Pollution Dashboard")
 
 # Put Heat Map first so the app loads a robust page by default
 # Load a light page first so initial render is fast
+app.add_page("Introduction", intro_body)
 app.add_page("Heat Map", heat_map_body)
 app.add_page("Pollution Over Time", time_series_body)
 app.add_page("Tree Map", tree_map_body)
