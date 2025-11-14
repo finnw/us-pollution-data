@@ -17,11 +17,21 @@
 | Carbon Monoxide | CO Mean, CO 1st Max Value, CO 1st Max Hour, CO AQI | CO measures in parts per million |
 
 ## Business Requirements
-* Describe your business requirements
+* Visualise pollution levels across the United States to identify high-risk regions allowing for geographical analysis and<br>
+helping businesses assess environmental risks in regions where they operate or plan to expand. This also helps to highlight<br>
+regions where there is the greatest need for sustainability policies or business solutions that would reduce pollutants.
+* Show pollution levels over time to monitor improvements or deteriorations in air quality and explain pollution trends and<br>
+the impact of major events on pollutant levels.
+* Break down pollution levels by regions within states to highlight which areas contribute most to overall pollution, this will also allow <br>
+local communities to see how their region compares to others, encouraging grassroots environmental action.
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+* **H1**: There is a correlation between population size and pollution levels; more populous areas tend to have higher pollutant concentrations.
+* **H2**: Measurement coverage varies by region and population density, potentially leading to gaps or biases in pollution data.
+* **H3**: Pollution levels differ significantly between US regions (e.g., Northeast, Midwest, South, West) due to geographic, industrial, and policy factors.
+* **H4**: Urban areas have higher pollution levels than rural areas, reflecting differences in population density, traffic, and industrial activity.
+* **H5**: Major events within the dataset range (e.g., Hurricane Sandy in 2012, Clean Power Plan in 2015) cause observable changes in pollutant levels over time.
 
 ## Project Plan
 * Outline the high-level steps taken for the analysis.
@@ -29,7 +39,9 @@
 * Why did you choose the research methodologies you used?
 
 ## The rationale to map the business requirements to the Data Visualisations
-* List your business requirements and a rationale to map them to the Data Visualisations
+* Pollution levels by region visualised through interactive heat map
+* Pollution levels over time visualised through time series line plot
+* Pollution levels break down enabled through an interactive tree map
 
 ## Analysis techniques used
 * List the data analysis methods used and explain limitations or alternative approaches.
@@ -38,12 +50,16 @@
 * How did you use generative AI tools to help with ideation, design thinking and code optimisation?
 
 ## Ethical considerations
-* Were there any data privacy, bias or fairness issues with the data?
-* How did you overcome any legal or societal issues?
+* The dataset contains no personally identifiable data and is available for use under the Open Database Contents License.
 
 ## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
+**Dashboard Pages**<br>
+* Introduction: This is the landing page of the site and provides a quick overview of the dashboard contents and navigation.
+* Heat Map: Shows pollution across a map of the US, users can select pollutants and time frame as well as having a range of options for the granularity of the data displayed.
+* Pollution Over Time: Line plot showing pollution over time, users can select a specific state and/or change time displays to show historical or seasonal trends.
+* Tree Map: Provides an overview of pollution levels across States, Counties and Cities, users can select which pollutant to visualise.
+
+**Communication of data insights**
 * How were data insights communicated to technical and non-technical audiences?
 * Explain how the dashboard was designed to communicate complex data insights to different audiences.
 
@@ -52,7 +68,6 @@
 ## Unfixed Bugs
 * Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
 * Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
 
 ## Development Roadmap
 * What challenges did you face, and what strategies were used to overcome these challenges?
