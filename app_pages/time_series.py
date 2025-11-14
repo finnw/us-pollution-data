@@ -8,12 +8,14 @@ def time_series_body():
 
     st.write("# Pollution Over Time")
 
-    # group by state and day
-    df_state = df.groupby(['State', 'Date Local'], sort=False)[['NO2 AQI', 'O3 AQI', 'SO2 AQI', 'CO AQI']].mean().reset_index()
-
-    # # method from https://stackoverflow.com/questions/44941082/plot-multiple-columns-of-pandas-dataframe-using-seaborn
-    # # melt dataframe for AQIs
-    df_state = df_state.melt(id_vars=['State', 'Date Local'], value_vars=['NO2 AQI', 'O3 AQI', 'SO2 AQI', 'CO AQI'], var_name='pollutant', value_name='aqi')
+    # Only use AQI columns that exist in the DataFrame
+    possible_aqi_cols = ['NO2 AQI', 'O3 AQI', 'SO2 AQI', 'CO AQI']
+    available_aqi_cols = [col for col in possible_aqi_cols if col in df.columns]
+    if not available_aqi_cols:
+        st.error("No AQI columns found in the dataset.")
+        return
+    df_state = df.groupby(['State', 'Date Local'], sort=False)[available_aqi_cols].mean().reset_index()
+    df_state = df_state.melt(id_vars=['State', 'Date Local'], value_vars=available_aqi_cols, var_name='pollutant', value_name='aqi')
 
     # group data by time values, default year
     # select for year + month, month mean, daily mean and day of week
