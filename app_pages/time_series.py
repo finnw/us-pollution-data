@@ -5,11 +5,13 @@ from datetime import datetime
 import plotly.express as px
 
 def time_series_body():
-    df = st.session_state.loaded_data
+    base_path = "./data/cleaned_pollution_data.zip"
+    df = pd.read_csv(base_path, compression='zip', index_col=0)
+    #df = st.session_state.loaded_data
 
-    st.write("# Pollution Over Time")
+    st.write("## Pollution Over Time")
 
-    col_suffix = ' Mean'
+    col_suffix = ' AQI'
 
     # group by state and day
     df_state = df.groupby(['State', 'Date Local'], sort=False)[['NO2 AQI', 'O3 AQI', 'SO2' + col_suffix, 'CO AQI']].mean().reset_index()
@@ -22,55 +24,51 @@ def time_series_body():
     # select for year + month, month mean, daily mean and day of week
     # convert Date Local to date format
     df_state['Date Local'] = pd.to_datetime(df_state['Date Local'])
+    df_state.sort_values(by='Date Local', inplace=True)
 
-    # # add year, month and day columns - TO BE REMOVED AFTER ETL UPDATE
-    # df_state['year'] = df_state['Date Local'].dt.year
-    # df_state['month'] = df_state['Date Local'].dt.month
+    @st.cache_data
+    def add_cols(df_state):
+        # add datetime columns for charts
+        df_state['year'] = df_state['Date Local'].dt.year
+        df_state['year and month'] = df_state['Date Local'].dt.strftime('%Y %b')
+        return df_state
+
+    df_state = add_cols(df_state)
 
     # make list of states for filtering data
-    state_list = sorted(df_state['State'].unique())
-    state_list = np.insert(state_list, 0, 'ALL STATES')
+    state_list = df_state['State'].unique()
+    state_list = np.insert(sorted(state_list), 0, 'ALL STATES')
 
     # make list of time selection types
-    time_list = {1: 'Change over time by year', 2: 'Change over time by year and month'}
+    time_list = {'year': 'Change over time by year', 'year and month': 'Change over time by year and month'}
 
     # select action based on chosen variables
     state_sel = st.selectbox(label='Choose a state', options=state_list, key="1")
-    time_sel = st.selectbox(label='Choose a time display type', options=time_list.keys(), key="2", format_func=lambda x: time_list.get(x))
+    time_col = st.selectbox(label='Choose a time display type', options=time_list.keys(), key="2", format_func=lambda x: time_list.get(x))
+   
+    # set up columns to group by
     group_cols = ['pollutant']
-
-    # initialise time column with default value 'year'
-    time_col = 'year'
-
-    # cache df with new cols
-    # check if col exists before adding
-
-    # create df columns based on time selection
-    def time_group(time_sel):
-        match time_sel:
-            case 1:
-                time_col = 'year'
-                df_state[time_col] = df_state['Date Local'].dt.year
-            case 2:
-                time_col = 'year and month'
-                df_state[time_col] = df_state['Date Local'].dt.strftime('%b %Y')
-        return time_col
-
-    time_col = time_group(time_sel)
     group_cols.append(time_col)
 
+    # select specific state if required
     if state_sel == 'ALL STATES':
         df_time = df_state
     else:
         df_time = df_state.loc[df_state['State'] == state_sel]
 
+    # group data by selections
     df_time = df_time.groupby(group_cols, sort=False)['aqi'].mean().reset_index()
 
-    
-    if st.button('Load Chart'):
-        # line chart for pollution over time
-        # seaborn integration from https://docs.kanaries.net/topics/Streamlit/streamlit-seaborn
-        st.write(f"Chart showing AQI by Pollutant over time")
-        fig = px.line(df_time, x=time_col, y='aqi', color='pollutant')
-        st.plotly_chart(fig)
-        st.write("---")
+    # Defer heavy render until user clicks
+    render = st.button("Load Chart")
+
+    if not render:
+        st.info("Adjust settings, then click 'Load Chart' to draw.")
+        return
+   
+    # line chart for pollution over time
+    # seaborn integration from https://docs.kanaries.net/topics/Streamlit/streamlit-seaborn
+    st.write(f"Chart showing AQI by Pollutant over time")
+    fig = px.line(df_time, x=time_col, y='aqi', color='pollutant')
+    st.plotly_chart(fig)
+    st.write("---")
