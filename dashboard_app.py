@@ -23,10 +23,10 @@ app = MultiPage("US Pollution Dashboard")
 # Load a light page first so initial render is fast
 app.add_page("Introduction", intro_body)
 app.add_page("Heat Map", heat_map_body)
-app.add_page("Pollution Over Time", time_series_body)
-app.add_page("Tree Map", tree_map_body)
 app.add_page("Measurement Coverage", measurement_coverage_body)
 app.add_page("Population & Pollution Correlation", population_correlation_body)
+app.add_page("Pollution Over Time", time_series_body)
+app.add_page("Tree Map", tree_map_body)
 app.add_page("Event Impact Dashboard", event_impact_body)
 app.add_page("Regional Differences", regional_differences_body)
 
