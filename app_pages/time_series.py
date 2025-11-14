@@ -7,11 +7,9 @@ import plotly.express as px
 def time_series_body():
     base_path = "./data/cleaned_pollution_data.zip"
     df = pd.read_csv(base_path, compression='zip', index_col=0)
-    #df = st.session_state.loaded_data
+    # df = st.session_state.loaded_data
 
     st.write("## Pollution Over Time")
-
-    col_suffix = ' AQI'
 
     # Only use AQI columns that exist in the DataFrame
     possible_aqi_cols = ['NO2 AQI', 'O3 AQI', 'SO2 AQI', 'CO AQI']
@@ -33,6 +31,8 @@ def time_series_body():
         # add datetime columns for charts
         df_state['year'] = df_state['Date Local'].dt.year
         df_state['year and month'] = df_state['Date Local'].dt.strftime('%Y %b')
+        df_state['month'] = df_state['Date Local'].dt.month
+        df_state['day of year'] = df_state['Date Local'].dt.dayofyear
         return df_state
 
     df_state = add_cols(df_state)
@@ -42,7 +42,7 @@ def time_series_body():
     state_list = np.insert(sorted(state_list), 0, 'ALL STATES')
 
     # make list of time selection types
-    time_list = {'year': 'Change over time by year', 'year and month': 'Change over time by year and month'}
+    time_list = {'year': 'Change over time by year', 'year and month': 'Change over time by year and month', 'month': "Seasonality by month", 'day of year': 'Seasonality by day of year'}
 
     # select action based on chosen variables
     state_sel = st.selectbox(label='Choose a state', options=state_list, key="1")
@@ -57,6 +57,13 @@ def time_series_body():
         df_time = df_state
     else:
         df_time = df_state.loc[df_state['State'] == state_sel]
+
+    if time_col == 'month':
+        df_time.sort_values(by='month', inplace=True)
+    elif time_col == 'day of year':
+        df_time.sort_values(by='day of year', inplace=True)
+    else:
+        df_time.sort_values(by='Date Local', inplace=True)
 
     # group data by selections
     df_time = df_time.groupby(group_cols, sort=False)['aqi'].mean().reset_index()
