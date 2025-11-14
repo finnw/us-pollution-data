@@ -21,6 +21,10 @@ app.add_page("Introduction", intro_body)
 app.add_page("Heat Map", heat_map_body)
 app.add_page("Pollution Over Time", time_series_body)
 app.add_page("Tree Map", tree_map_body)
+from app_pages.measurement_coverage import measurement_coverage_body
+app.add_page("Measurement Coverage", measurement_coverage_body)
+from app_pages.event_impact import event_impact_body
+app.add_page("Event Impact Dashboard", event_impact_body)
 
 # cache data for faster loading on page changes
 
