@@ -16,6 +16,12 @@
 | Sulphur Dioxide | SO2 Mean, SO2 1st Max Value, SO2 1st Max Hour, SO2 AQI | SO2 measures in parts per billion |
 | Carbon Monoxide | CO Mean, CO 1st Max Value, CO 1st Max Hour, CO AQI | CO measures in parts per million |
 
+## Project Pages
+* Data ETL: [cleaning.ipynb](jupyter_notebooks\cleaning.ipynb)
+* Hypotheses Validation: [H1](jupyter_notebooks\hypothesis_population_correlation.ipynb), [H2](jupyter_notebooks/hypothesis_measurement_coverage.ipynb), [H3](jupyter_notebooks/hypothesis_regional_differences.ipynb), [H4](jupyter_notebooks/hypothesis_urban_vs_rural.ipynb), [H5](jupyter_notebooks\hypothesis_event_impact.ipynb)
+* Preparing mapping data: [etl_extract_cood.ipynb](jupyter_notebooks/etl_extract_cood.ipynb) and [build_enriched_dataset.ipynb](jupyter_notebooks\build_enriched_dataset.ipynb)
+* The dashboard was created in Streamlit and is available at this link: [US Pollution Dashboard](https://jxywwgotg8wauagztuhaiw.streamlit.app/)
+
 ## Business Requirements
 * Visualise pollution levels across the United States to identify high-risk regions allowing for geographical analysis and<br>
 helping businesses assess environmental risks in regions where they operate or plan to expand. This also helps to highlight<br>
@@ -33,82 +39,51 @@ local communities to see how their region compares to others, encouraging grassr
 * **H4**: Urban areas have higher pollution levels than rural areas, reflecting differences in population density, traffic, and industrial activity.
 * **H5**: Major events within the dataset range (e.g., Hurricane Sandy in 2012, Clean Power Plan in 2015) cause observable changes in pollutant levels over time.
 
-## Project Plan
-* Outline the high-level steps taken for the analysis.
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
-
 ## The rationale to map the business requirements to the Data Visualisations
-* Pollution levels by region visualised through interactive heat map
+* Pollution levels by region visualised through interactive heat map and pollution x population scatterplot
 * Pollution levels over time visualised through time series line plot
-* Pollution levels break down enabled through an interactive tree map
-
-## Analysis techniques used
-* List the data analysis methods used and explain limitations or alternative approaches.
-* How did you structure the data analysis techniques. Justify your response.
-* Did the data limit you, and did you use an alternative approach to meet these challenges?
-* How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+* Pollution levels break down enabled through an interactive tree map and coverage bias highlighted with map visualisation
 
 ## Ethical considerations
 * The dataset contains no personally identifiable data and is available for use under the Open Database Contents License.
 
 ## Dashboard Design
+The dashboard was created in Streamlit and is available at this link: [US Pollution Dashboard](https://jxywwgotg8wauagztuhaiw.streamlit.app/)
+
 **Dashboard Pages**<br>
-* Introduction: This is the landing page of the site and provides a quick overview of the dashboard contents and navigation.
-* Heat Map: Shows pollution across a map of the US, users can select pollutants and time frame as well as having a range of options for the granularity of the data displayed.
-* Pollution Over Time: Line plot showing pollution over time, users can select a specific state and/or change time displays to show historical or seasonal trends.
-* Tree Map: Provides an overview of pollution levels across States, Counties and Cities, users can select which pollutant to visualise.
+* Introduction: This is the landing page of the site and provides a quick overview of the dashboard contents and navigation
+* Heat Map: Shows pollution across a map of the US, users can select pollutants and time frame as well as having a range of options for the granularity of the data displayed
+* Population and Polution Correlation: Shows relationsip between pollution level and city population sizes
+* Measurement Coverage: Shows monitoring locations and population distributions to highlight coverage bias
+* Pollution Over Time: Line plot showing pollution over time, users can select a specific state and/or change time displays to show historical or seasonal trends
+* Tree Map: Provides an overview of pollution levels across States, Counties and Cities, users can select which pollutant to visualise
+* Event Impact Dashboard: Shows event markers for pollution over time
+* Regional Differences: Uses boxplots to show pollutant distributions across regions in the US
 
 **Communication of data insights**
-* How were data insights communicated to technical and non-technical audiences?
-* Explain how the dashboard was designed to communicate complex data insights to different audiences.
+* Data insights are displayed through complex interactive graphs which allow technical users to focus on areas of specific interest and fully explore the data. <br>
+Text summaries and simpler charts are provided to give novice users easy access to the most important pollution information.
 
-## Conclusions and Next Steps
+## Conclusion
+The analysis confirms that major events can lead to observable shifts in pollutant levels, although the timing and magnitude of these impacts vary across contexts. <br>Importantly, the data challenges the assumption that urban areas consistently experience higher pollution than rural regions; in fact, rural areas sometimes show comparable or greater pollutant concentrations. <br>Additionally, the monitoring network’s bias toward urban centers highlights a limitation in coverage, potentially underrepresenting rural pollution levels and influencing overall interpretations.
 
-## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
+## Next Steps
+To build on these findings, future work should expand the scope of pollutants studied, incorporate longer-term datasets, and explore more granular regional differences. <br>Enhancing monitoring coverage in rural areas would provide a more balanced view of national pollution trends. <br>Further, integrating event markers with broader socio-economic or environmental data could deepen understanding of how specific events shape pollution dynamics and inform targeted policy interventions.
+
 
 ## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
-
-## Deployment
-### Heroku
-
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
-
+The large dataset caused us some issues with uploading to github and managing time taken to perform cleaning and analysis steps.<br>
+File size was worked around by using file compression when uploading to github. <br>
+Issues with visualisations where overcome by grouping data into manageable sets before charting.
 
 ## Main Data Analysis Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+* Pandas and Numpy: Used for database manipulation
+* Matplotlib, seaborn and plotly: Used to create visualisations within jupyter notebooks and streamlit app
+* Scikit Learn: Used for machine learning modelling
+* Streamlit for dashboard creation and interactive visualisations
 
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
-
-## Acknowledgements (optional)
-* Thank the people who provided support through this project.
+* Generative AI was used to help with ideation, document drafting, code suggestions and bug fixing 
+* Web resources were used in creation of dashboard pages and links can be found within the code comments
