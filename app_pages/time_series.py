@@ -5,9 +5,7 @@ from datetime import datetime
 import plotly.express as px
 
 def time_series_body():
-    base_path = "./data/cleaned_pollution_data.zip"
-    df = pd.read_csv(base_path, compression='zip', index_col=0)
-    # df = st.session_state.loaded_data
+    df = st.session_state.loaded_data
 
     st.write("## Pollution Over Time")
 
